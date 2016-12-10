@@ -31,11 +31,11 @@ setup(
     author="Jose Ariel Keselman",
     author_email='skariel@gmail.com',
     install_requires=[
-        'docopt==0.6.1',
-        'pythonium==0.6.2',
-        'sockjs-tornado==1.0.0',
-        'tornado==3.2',
-        'beautifulsoup4==4.3.2'
+        'docopt',
+        'sockjs-tornado',
+        'tornado',
+        'beautifulsoup4',
+        'javascripthon',
     ],
     license="MIT",
     packages=find_packages(),

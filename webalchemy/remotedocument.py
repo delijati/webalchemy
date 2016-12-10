@@ -8,8 +8,7 @@ from types import FunctionType
 from inspect import getsource
 from textwrap import dedent
 
-from pythonium.veloce.veloce import Veloce
-
+from metapensiero.pj.__main__ import transform_string
 from webalchemy.saferef import safeRef
 from webalchemy.htmlparser import get_element_ids
 
@@ -28,10 +27,8 @@ def rpc():
     pass
 
 def _vtranslate(code):
-    tree = parse(code)
-    translator = Veloce()
-    translator.visit(tree)
-    return translator.writer.value()
+    ret = transform_string(code, enable_es6=True)
+    return ret
 
 
 def _transchange(s, newname):
